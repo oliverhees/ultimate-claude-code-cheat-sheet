@@ -1,4 +1,4 @@
-# 🚀 Das Ultimative Claude Code Cheat Sheet
+# 🚀 Claude Code Cheat Sheet
 
 <div align="center">
 
@@ -6,13 +6,13 @@
 
 [![KI Heroes Community](https://img.shields.io/badge/KI%20Heroes-Community-FF6B6B?style=for-the-badge)](https://www.skool.com/ki-heroes)
 [![Website](https://img.shields.io/badge/Website-ki--heroes.net-4ECDC4?style=for-the-badge)](https://ki-heroes.net)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Ultimate%20Guide-95E1D3?style=for-the-badge)](https://claude.ai/code)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Official%20Guide-95E1D3?style=for-the-badge)](https://claude.ai/code)
 
 **[🇩🇪 Deutsch](#deutsch) | [🇬🇧 English](#english)**
 
 ---
 
-### 💡 **Das umfassendste Claude Code Referenzwerk für Anfänger und Profis**
+### 💡 **Das praxisorientierte Claude Code Referenzwerk für die KI Heroes Community**
 
 </div>
 
@@ -22,191 +22,161 @@
 
 ### 🎓 Willkommen bei KI Heroes!
 
-Dies ist das **ultimative Claude Code Cheat Sheet** - speziell entwickelt für unsere KI Heroes Community. Egal ob du gerade erst anfängst oder bereits fortgeschritten bist, hier findest du alles, was du brauchst, um Claude Code zu meistern!
+Dies ist das **Claude Code Cheat Sheet** - speziell entwickelt für unsere KI Heroes Community. Hier findest du alle wichtigen Informationen und Best Practices zu Claude Code, basierend auf der offiziellen Anthropic Dokumentation.
 
-### 🌟 Was macht dieses Cheat Sheet besonders?
+### 🌟 Was bietet dieses Cheat Sheet?
 
-- ✅ **100% Anfängerfreundlich** - Schritt-für-Schritt Anleitungen von der Installation an
-- ✅ **Sub-Agents Meisterklasse** - Lerne parallele Ausführung und Agent-Patterns
-- ✅ **Praxisorientiert** - Echte Beispiele mit Next.js, React und TypeScript
+- ✅ **Offizielle Features** - Nur verifizierte Funktionen aus der Anthropic Dokumentation
+- ✅ **Praxisorientiert** - Echte Anwendungsbeispiele und Workflows
+- ✅ **Sub-Agents erklärt** - Verstehe und nutze die verfügbaren Sub-Agents
+- ✅ **Best Practices** - Bewährte Methoden aus der Community
 - ✅ **Zweisprachig** - Komplett auf Deutsch und Englisch verfügbar
-- ✅ **Community-First** - Von der KI Heroes Community für die Community
 
-### 📚 Schnellstart für Anfänger
+### 📚 Schnellstart
 
 ```bash
-# Claude Code in 3 Minuten installiert!
-curl -sL https://install.anthropic.com | sh
+# Claude Code Installation (macOS/Linux/WSL)
+curl -fsSL https://claude.ai/install.sh | bash
 
-# Dein erster Befehl
-claude "Hallo KI Heroes!"
+# Oder via NPM
+npm install -g @anthropic-ai/claude-code
 
-# Dein erstes Projekt
-claude --add-dir ./mein-projekt "Erkläre mir diesen Code"
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
+
+# Installation überprüfen
+claude doctor
 ```
 
-👉 **[Zum kompletten Anfänger-Guide →](./docs/de/00-installation-schritt-fuer-schritt.md)**
+### 🤖 Verfügbare Sub-Agents
 
-### 🗂️ Inhaltsverzeichnis
+Claude Code bietet spezialisierte Sub-Agents für verschiedene Aufgaben:
 
-#### 🎯 **Für Einsteiger**
-- [🚀 Installation Schritt-für-Schritt](./docs/de/00-installation-schritt-fuer-schritt.md)
-- [👶 Erste Schritte mit Claude Code](./docs/de/01-erste-schritte.md)
-- [📝 Die wichtigsten Basis-Befehle](./docs/de/02-basis-befehle.md)
-- [❓ Häufige Anfängerfehler & Lösungen](./docs/de/troubleshooting-faq.md)
+| Sub-Agent | Zweck | Anwendungsbereich |
+|-----------|-------|-------------------|
+| **Code Reviewer** | Code-Qualität & Sicherheit | Überprüft Code auf Best Practices, Sicherheitslücken und Optimierungspotential |
+| **Debugger** | Fehlerbehebung | Root-Cause-Analyse, systematische Fehlersuche |
+| **Data Scientist** | Datenanalyse | SQL-Queries, BigQuery-Analysen, Datenverarbeitung |
 
-#### 🤖 **Sub-Agents & Parallele Ausführung** (Das Herzstück!)
-- [🔥 Sub-Agents verstehen und meistern](./docs/de/03-sub-agents-meistern.md)
-- [⚡ Parallele Ausführung für maximale Effizienz](./docs/de/04-parallele-ausfuehrung.md)
-- [🏭 Agent Factory Patterns](./examples/sub-agents/README.md)
-- [🎨 Praktische Sub-Agent Beispiele](./examples/sub-agents/praktische-beispiele.md)
+### 🛠️ Core Features
 
-#### 🚀 **Fortgeschrittene Themen**
-- [🔄 Workflow Patterns](./docs/de/05-workflow-patterns.md)
-- [✨ Best Practices](./docs/de/06-best-practices.md)
-- [🛠️ Troubleshooting & FAQ](./docs/de/07-troubleshooting-faq.md)
+#### **Code-Verständnis & Navigation**
+- Neue Codebasen schnell verstehen
+- Relevanten Code effizient finden
+- Bugs systematisch beheben
+- Code refaktorieren und optimieren
 
-### 🤖 Sub-Agents: Die Revolution in der KI-Entwicklung
+#### **Workflow-Tools**
+- **Plan Mode** - Sichere Code-Analyse ohne direkte Änderungen
+- **Extended Thinking** - Komplexe Problemlösung mit erweitertem Kontext
+- **Git-Integration** - Nahtlose Versionskontrolle
+- **Custom Commands** - Eigene Befehle definieren
+- **Hooks** - Event-basierte Automatisierung
 
-Sub-Agents sind das Geheimnis für 10x schnellere Entwicklung! Hier ein Beispiel:
+### 📋 Wichtige Befehle
 
-```javascript
-// Parallele Sub-Agent Ausführung in Next.js
-const agents = {
-  codeReviewer: "Review den Code auf Best Practices",
-  testGenerator: "Erstelle Unit Tests",
-  docWriter: "Schreibe die Dokumentation",
-  optimizer: "Optimiere die Performance"
-};
+```bash
+# Claude Code starten
+claude
 
-// Alle Agents arbeiten GLEICHZEITIG! 🚀
-await Promise.all(Object.entries(agents).map(([agent, task]) => 
-  claude.runAgent(agent, task)
-));
+# Installation verifizieren
+claude doctor
+
+# Updates installieren
+claude update
+
+# Auto-Updates deaktivieren
+claude config set autoUpdates false --global
 ```
 
-### 📊 Progressive Lernebenen
+### 🔧 Sub-Agent Konfiguration
 
-| Level | Thema | Dauer | Was du lernst |
-|-------|-------|-------|---------------|
-| 🌱 **1** | Installation & Setup | 30 Min | Claude Code installieren und konfigurieren |
-| 🌿 **2** | Erste Befehle | 1 Std | Grundlegende Befehle und Navigation |
-| 🌳 **3** | Projekte verwalten | 2 Std | Mit Verzeichnissen und Dateien arbeiten |
-| 🎯 **4** | Sub-Agents Basics | 3 Std | Erste Sub-Agents erstellen und nutzen |
-| ⚡ **5** | Parallele Ausführung | 4 Std | Performance durch Parallelisierung |
-| 🔥 **6** | Agent Factory | 1 Tag | Komplexe Agent-Patterns implementieren |
-| 🚀 **7** | Workflow Automation | 2 Tage | CI/CD Integration und Automation |
-| 🏆 **8** | Meisterschaft | Ongoing | Eigene Patterns und Optimierungen |
+Sub-Agents können mit YAML-Frontmatter in Markdown-Dateien konfiguriert werden:
 
-### 🎥 Video Tutorials & Community
+```yaml
+---
+name: mein-code-reviewer
+type: code-reviewer
+tools:
+  - read
+  - edit
+  - bash
+system_prompt: |
+  Du bist ein Code-Review Spezialist.
+  Fokussiere dich auf Sicherheit und Performance.
+---
+```
 
-Besuche unsere **[KI Heroes Skool Community](https://www.skool.com/ki-heroes)** für:
-- 📹 Exklusive Video-Tutorials
-- 💬 Live Q&A Sessions
-- 🤝 Direkter Austausch mit anderen KI Heroes
-- 🎁 Bonus-Content und Updates
+### 🚀 Deployment-Optionen
+
+Claude Code unterstützt verschiedene Deployment-Szenarien:
+
+- **Amazon Bedrock** - Enterprise AWS Integration
+- **Google Vertex AI** - Google Cloud Platform
+- **Corporate Proxy** - Unternehmensnetzwerke
+- **LLM Gateway** - Custom API Endpoints
+- **DevContainer** - Containerisierte Entwicklungsumgebungen
 
 ### 💻 Praktische Beispiele
 
-#### Beispiel 1: Dein erstes Next.js Projekt mit Claude Code
+#### Beispiel 1: Code Review mit Sub-Agent
 
 ```bash
-# Projekt erstellen
-npx create-next-app@latest mein-projekt --typescript --tailwind --app
-
-# Claude Code aktivieren
-cd mein-projekt
-claude --add-dir . "Hilf mir eine Todo-App zu bauen"
-
-# Sub-Agent für Components
-claude --agent component-builder "Erstelle eine TodoList Komponente"
+# Code Review für ein Projekt
+claude "Bitte überprüfe meinen Code mit dem Code Reviewer Sub-Agent"
 ```
 
-#### Beispiel 2: Parallele Code-Review
+#### Beispiel 2: Debugging Session
 
 ```bash
-# Mehrere Dateien gleichzeitig reviewen
-claude --parallel \
-  --review src/components/*.tsx \
-  --check-types \
-  --suggest-improvements
+# Fehleranalyse starten
+claude "Hilf mir diesen Bug zu finden mit dem Debugger Sub-Agent"
 ```
 
-### 🛠️ Installation Quick Guide
-
-<details>
-<summary><b>🖥️ Windows Installation</b></summary>
-
-```powershell
-# PowerShell als Administrator
-irm https://install.anthropic.com/windows | iex
-
-# Verify Installation
-claude --version
-```
-</details>
-
-<details>
-<summary><b>🍎 macOS Installation</b></summary>
+#### Beispiel 3: Datenanalyse
 
 ```bash
-# Terminal
-curl -sL https://install.anthropic.com | sh
-
-# Verify Installation
-claude --version
+# SQL-Analyse mit Data Scientist
+claude "Analysiere diese Datenbankabfrage mit dem Data Scientist Sub-Agent"
 ```
-</details>
 
-<details>
-<summary><b>🐧 Linux Installation</b></summary>
+### 📊 System-Anforderungen
 
-```bash
-# Terminal
-curl -sL https://install.anthropic.com | sh
+| Komponente | Minimum | Empfohlen |
+|------------|---------|-----------|
+| **OS** | macOS 10.15+, Ubuntu 20.04+, Windows 10+ | Aktuelle Versionen |
+| **RAM** | 4GB | 8GB+ |
+| **Node.js** | 18+ | Neueste LTS |
+| **Internet** | Erforderlich | Stabile Verbindung |
 
-# Verify Installation
-claude --version
-```
-</details>
+### 🔐 Sicherheitsfeatures
+
+- **Berechtigungsbasierte Architektur** - Granulare Zugriffskontrolle
+- **Prompt Injection Protection** - Schutz vor Manipulation
+- **Konfigurierbare Zugriffskontrolle** - Anpassbare Sicherheitsrichtlinien
+- **Event-Logging** - Vollständige Audit-Trails
+
+### 📈 Monitoring & Analytics
+
+- Nutzungsmetriken verfolgen mit `/cost`
+- Team-Analytics Dashboard
+- Performance-Monitoring
+- Kostenkontrolle und Budgetierung
 
 ### 🤝 Community & Support
 
 - 🌐 **Website**: [ki-heroes.net](https://ki-heroes.net)
 - 👥 **Community**: [Skool KI Heroes](https://www.skool.com/ki-heroes)
-- 📧 **Kontakt**: Über die Community-Plattform
-- 🐛 **Issues**: Direkt in der Community diskutieren
+- 📚 **Offizielle Docs**: [docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code/overview)
+- 🐛 **Feedback**: `/bug` Befehl in Claude Code
 
-### 🏆 Erfolgsgeschichten aus der Community
+### 🎯 Best Practices
 
-> "Mit den Sub-Agents spare ich täglich 3-4 Stunden Entwicklungszeit!" - *Max, KI Heroes Member*
-
-> "Das beste Claude Code Tutorial das ich je gesehen habe. Endlich verstehe ich parallele Ausführung!" - *Sarah, KI Heroes Member*
-
-> "Von 0 auf 100 in einer Woche. Dieses Cheat Sheet ist Gold wert!" - *Tom, KI Heroes Member*
-
-### 📈 Deine Lernreise
-
-```mermaid
-graph LR
-    A[🌱 Anfänger] --> B[📚 Basics]
-    B --> C[🤖 Sub-Agents]
-    C --> D[⚡ Parallele Ausführung]
-    D --> E[🚀 Agent Factory]
-    E --> F[🏆 Meister]
-    
-    style A fill:#FFE5B4
-    style C fill:#98FB98
-    style E fill:#87CEEB
-    style F fill:#FFD700
-```
-
-### 🎯 Nächste Schritte
-
-1. **[Starte mit der Installation](./docs/de/00-installation-schritt-fuer-schritt.md)**
-2. **[Arbeite dich durch die Anfänger-Tutorials](./docs/de/01-erste-schritte.md)**
-3. **[Meistere Sub-Agents](./docs/de/03-sub-agents-meistern.md)**
-4. **[Tritt der Community bei](https://www.skool.com/ki-heroes)**
+1. **Plan Mode nutzen** - Analysiere Code sicher bevor du Änderungen vornimmst
+2. **Sub-Agents gezielt einsetzen** - Nutze spezialisierte Agents für spezifische Aufgaben
+3. **Hooks konfigurieren** - Automatisiere wiederkehrende Aufgaben
+4. **Kosten im Blick behalten** - Nutze `/cost` für Kostenkontrolle
+5. **Regelmäßige Updates** - Halte Claude Code aktuell mit `claude update`
 
 ---
 
@@ -214,197 +184,167 @@ graph LR
 
 ### 🎓 Welcome to KI Heroes!
 
-This is the **ultimate Claude Code Cheat Sheet** - specially developed for our KI Heroes Community. Whether you're just starting out or already advanced, you'll find everything you need to master Claude Code here!
+This is the **Claude Code Cheat Sheet** - specially developed for our KI Heroes Community. Here you'll find all important information and best practices for Claude Code, based on the official Anthropic documentation.
 
-### 🌟 What makes this Cheat Sheet special?
+### 🌟 What does this Cheat Sheet offer?
 
-- ✅ **100% Beginner-friendly** - Step-by-step guides from installation onwards
-- ✅ **Sub-Agents Masterclass** - Learn parallel execution and agent patterns
-- ✅ **Practice-oriented** - Real examples with Next.js, React, and TypeScript
+- ✅ **Official Features** - Only verified functions from Anthropic documentation
+- ✅ **Practice-oriented** - Real use cases and workflows
+- ✅ **Sub-Agents explained** - Understand and use available Sub-Agents
+- ✅ **Best Practices** - Proven methods from the community
 - ✅ **Bilingual** - Complete in German and English
-- ✅ **Community-First** - From the KI Heroes Community for the Community
 
-### 📚 Quick Start for Beginners
+### 📚 Quick Start
 
 ```bash
-# Install Claude Code in 3 minutes!
-curl -sL https://install.anthropic.com | sh
+# Claude Code Installation (macOS/Linux/WSL)
+curl -fsSL https://claude.ai/install.sh | bash
 
-# Your first command
-claude "Hello KI Heroes!"
+# Or via NPM
+npm install -g @anthropic-ai/claude-code
 
-# Your first project
-claude --add-dir ./my-project "Explain this code to me"
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
+
+# Verify installation
+claude doctor
 ```
 
-👉 **[Go to complete Beginner's Guide →](./docs/en/00-installation-step-by-step.md)**
+### 🤖 Available Sub-Agents
 
-### 🗂️ Table of Contents
+Claude Code offers specialized Sub-Agents for various tasks:
 
-#### 🎯 **For Beginners**
-- [🚀 Step-by-Step Installation](./docs/en/00-installation-step-by-step.md)
-- [👶 First Steps with Claude Code](./docs/en/01-first-steps.md)
-- [📝 Essential Basic Commands](./docs/en/02-basic-commands.md)
-- [❓ Common Beginner Mistakes & Solutions](./docs/en/troubleshooting-faq.md)
+| Sub-Agent | Purpose | Application Area |
+|-----------|---------|------------------|
+| **Code Reviewer** | Code Quality & Security | Reviews code for best practices, security vulnerabilities, and optimization potential |
+| **Debugger** | Troubleshooting | Root-cause analysis, systematic bug finding |
+| **Data Scientist** | Data Analysis | SQL queries, BigQuery analyses, data processing |
 
-#### 🤖 **Sub-Agents & Parallel Execution** (The Core!)
-- [🔥 Understanding and Mastering Sub-Agents](./docs/en/03-mastering-sub-agents.md)
-- [⚡ Parallel Execution for Maximum Efficiency](./docs/en/04-parallel-execution.md)
-- [🏭 Agent Factory Patterns](./examples/sub-agents/README_EN.md)
-- [🎨 Practical Sub-Agent Examples](./examples/sub-agents/practical-examples.md)
+### 🛠️ Core Features
 
-#### 🚀 **Advanced Topics**
-- [🔄 Workflow Patterns](./docs/en/05-workflow-patterns.md)
-- [✨ Best Practices](./docs/en/06-best-practices.md)
-- [🛠️ Troubleshooting & FAQ](./docs/en/07-troubleshooting-faq.md)
+#### **Code Understanding & Navigation**
+- Quickly understand new codebases
+- Efficiently find relevant code
+- Systematically fix bugs
+- Refactor and optimize code
 
-### 🤖 Sub-Agents: The Revolution in AI Development
+#### **Workflow Tools**
+- **Plan Mode** - Safe code analysis without direct changes
+- **Extended Thinking** - Complex problem solving with extended context
+- **Git Integration** - Seamless version control
+- **Custom Commands** - Define your own commands
+- **Hooks** - Event-based automation
 
-Sub-Agents are the secret to 10x faster development! Here's an example:
+### 📋 Important Commands
 
-```javascript
-// Parallel Sub-Agent execution in Next.js
-const agents = {
-  codeReviewer: "Review code for best practices",
-  testGenerator: "Create unit tests",
-  docWriter: "Write documentation",
-  optimizer: "Optimize performance"
-};
+```bash
+# Start Claude Code
+claude
 
-// All agents work SIMULTANEOUSLY! 🚀
-await Promise.all(Object.entries(agents).map(([agent, task]) => 
-  claude.runAgent(agent, task)
-));
+# Verify installation
+claude doctor
+
+# Install updates
+claude update
+
+# Disable auto-updates
+claude config set autoUpdates false --global
 ```
 
-### 📊 Progressive Learning Levels
+### 🔧 Sub-Agent Configuration
 
-| Level | Topic | Duration | What you'll learn |
-|-------|-------|----------|-------------------|
-| 🌱 **1** | Installation & Setup | 30 Min | Install and configure Claude Code |
-| 🌿 **2** | First Commands | 1 Hr | Basic commands and navigation |
-| 🌳 **3** | Project Management | 2 Hrs | Working with directories and files |
-| 🎯 **4** | Sub-Agents Basics | 3 Hrs | Create and use first Sub-Agents |
-| ⚡ **5** | Parallel Execution | 4 Hrs | Performance through parallelization |
-| 🔥 **6** | Agent Factory | 1 Day | Implement complex agent patterns |
-| 🚀 **7** | Workflow Automation | 2 Days | CI/CD Integration and automation |
-| 🏆 **8** | Mastery | Ongoing | Custom patterns and optimizations |
+Sub-Agents can be configured with YAML frontmatter in Markdown files:
 
-### 🎥 Video Tutorials & Community
+```yaml
+---
+name: my-code-reviewer
+type: code-reviewer
+tools:
+  - read
+  - edit
+  - bash
+system_prompt: |
+  You are a code review specialist.
+  Focus on security and performance.
+---
+```
 
-Visit our **[KI Heroes Skool Community](https://www.skool.com/ki-heroes)** for:
-- 📹 Exclusive video tutorials
-- 💬 Live Q&A sessions
-- 🤝 Direct exchange with other KI Heroes
-- 🎁 Bonus content and updates
+### 🚀 Deployment Options
+
+Claude Code supports various deployment scenarios:
+
+- **Amazon Bedrock** - Enterprise AWS Integration
+- **Google Vertex AI** - Google Cloud Platform
+- **Corporate Proxy** - Enterprise networks
+- **LLM Gateway** - Custom API endpoints
+- **DevContainer** - Containerized development environments
 
 ### 💻 Practical Examples
 
-#### Example 1: Your first Next.js project with Claude Code
+#### Example 1: Code Review with Sub-Agent
 
 ```bash
-# Create project
-npx create-next-app@latest my-project --typescript --tailwind --app
-
-# Activate Claude Code
-cd my-project
-claude --add-dir . "Help me build a Todo app"
-
-# Sub-Agent for Components
-claude --agent component-builder "Create a TodoList component"
+# Code review for a project
+claude "Please review my code with the Code Reviewer Sub-Agent"
 ```
 
-#### Example 2: Parallel Code Review
+#### Example 2: Debugging Session
 
 ```bash
-# Review multiple files simultaneously
-claude --parallel \
-  --review src/components/*.tsx \
-  --check-types \
-  --suggest-improvements
+# Start error analysis
+claude "Help me find this bug with the Debugger Sub-Agent"
 ```
 
-### 🛠️ Installation Quick Guide
-
-<details>
-<summary><b>🖥️ Windows Installation</b></summary>
-
-```powershell
-# PowerShell as Administrator
-irm https://install.anthropic.com/windows | iex
-
-# Verify Installation
-claude --version
-```
-</details>
-
-<details>
-<summary><b>🍎 macOS Installation</b></summary>
+#### Example 3: Data Analysis
 
 ```bash
-# Terminal
-curl -sL https://install.anthropic.com | sh
-
-# Verify Installation
-claude --version
+# SQL analysis with Data Scientist
+claude "Analyze this database query with the Data Scientist Sub-Agent"
 ```
-</details>
 
-<details>
-<summary><b>🐧 Linux Installation</b></summary>
+### 📊 System Requirements
 
-```bash
-# Terminal
-curl -sL https://install.anthropic.com | sh
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| **OS** | macOS 10.15+, Ubuntu 20.04+, Windows 10+ | Latest versions |
+| **RAM** | 4GB | 8GB+ |
+| **Node.js** | 18+ | Latest LTS |
+| **Internet** | Required | Stable connection |
 
-# Verify Installation
-claude --version
-```
-</details>
+### 🔐 Security Features
+
+- **Permission-based Architecture** - Granular access control
+- **Prompt Injection Protection** - Protection against manipulation
+- **Configurable Access Control** - Customizable security policies
+- **Event Logging** - Complete audit trails
+
+### 📈 Monitoring & Analytics
+
+- Track usage metrics with `/cost`
+- Team analytics dashboard
+- Performance monitoring
+- Cost control and budgeting
 
 ### 🤝 Community & Support
 
 - 🌐 **Website**: [ki-heroes.net](https://ki-heroes.net)
 - 👥 **Community**: [Skool KI Heroes](https://www.skool.com/ki-heroes)
-- 📧 **Contact**: Via the community platform
-- 🐛 **Issues**: Discuss directly in the community
+- 📚 **Official Docs**: [docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code/overview)
+- 🐛 **Feedback**: `/bug` command in Claude Code
 
-### 🏆 Success Stories from the Community
+### 🎯 Best Practices
 
-> "With Sub-Agents, I save 3-4 hours of development time daily!" - *Max, KI Heroes Member*
-
-> "The best Claude Code tutorial I've ever seen. Finally, I understand parallel execution!" - *Sarah, KI Heroes Member*
-
-> "From 0 to 100 in a week. This Cheat Sheet is worth its weight in gold!" - *Tom, KI Heroes Member*
-
-### 📈 Your Learning Journey
-
-```mermaid
-graph LR
-    A[🌱 Beginner] --> B[📚 Basics]
-    B --> C[🤖 Sub-Agents]
-    C --> D[⚡ Parallel Execution]
-    D --> E[🚀 Agent Factory]
-    E --> F[🏆 Master]
-    
-    style A fill:#FFE5B4
-    style C fill:#98FB98
-    style E fill:#87CEEB
-    style F fill:#FFD700
-```
-
-### 🎯 Next Steps
-
-1. **[Start with Installation](./docs/en/00-installation-step-by-step.md)**
-2. **[Work through the Beginner Tutorials](./docs/en/01-first-steps.md)**
-3. **[Master Sub-Agents](./docs/en/03-mastering-sub-agents.md)**
-4. **[Join the Community](https://www.skool.com/ki-heroes)**
+1. **Use Plan Mode** - Analyze code safely before making changes
+2. **Deploy Sub-Agents strategically** - Use specialized agents for specific tasks
+3. **Configure Hooks** - Automate recurring tasks
+4. **Keep costs in check** - Use `/cost` for cost control
+5. **Regular updates** - Keep Claude Code current with `claude update`
 
 ---
 
 <div align="center">
 
-### 💖 Erstellt mit Leidenschaft von Oliver Hees für die KI Heroes Community
+### 💖 Created with passion by Oliver Hees for the KI Heroes Community
 
 **[🏠 ki-heroes.net](https://ki-heroes.net) | [👥 Community](https://www.skool.com/ki-heroes)**
 
